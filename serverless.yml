@@ -20,10 +20,10 @@ functions:
   hello:
     handler: handler.hello
     enviroment:
-      bucket: serverless
+      bucket: node-aws-serverless
     events:
       - s3:
-          bucket: node-serverless
+          bucket: node-aws-serverless
           event: s3:ObjectCreated:*
           rules:
             - prefix: uploads/
