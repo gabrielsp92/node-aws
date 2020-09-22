@@ -1,0 +1,26 @@
+{
+  "name": "node-aws",
+  "version": "1.0.0",
+  "description": "> Simple serverless nodejs study",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "rm -rf node_modules/sharp && npm install --platform=linux --arch=x64 --target=8.10.0 sharp",
+    "deploy": "serverless deploy -v",
+    "postdeploy": "rm -rf node_modules/sharp && npm install sharp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielsp92/node-aws.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrielsp92/node-aws/issues"
+  },
+  "homepage": "https://github.com/gabrielsp92/node-aws#readme",
+  "dependencies": {
+    "sharp": "^0.26.1"
+  }
+}
